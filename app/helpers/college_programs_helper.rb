@@ -1,0 +1,2 @@
+module CollegeProgramsHelper
+end

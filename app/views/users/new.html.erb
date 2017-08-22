@@ -1,0 +1,10 @@
+<%= form_for @user do |f| %>
+Name <%= f.text_field :username, id:"user[name]" %><br>
+Password <%= f.text_field :password %><br>
+SAT Score <%= f.text_field :sat_score %><br>
+ACT Score <%= f.text_field :act_avg %><br>
+select menu for majors
+Field of Study <%= f.text_field :major %><br>
+<%= f.submit %><br>
+
+<% end %> 

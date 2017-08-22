@@ -1,0 +1,18 @@
+ <% if flash[:message] != nil%>
+ 	<%= flash[:message] %>
+ <% end %>
+
+<ul>
+  <li id="user[name]">Name: <%= @user.username %></li>
+  <li>Field of Study: <%= @user.major %></li>
+
+  <% if @user.sat_score != nil %>
+  	<li>SAT Score: <%= @user.sat_score %></li>
+  <% end %>
+
+  <% if @user.act_avg != nil %>
+  	<li>ACT Score: <%= @user.act_avg %></li>
+  <% end %>
+
+</ul>
+
