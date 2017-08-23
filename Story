@@ -1,0 +1,11 @@
+When I go to the site, I want to be able to Browse colleges without signing up, So I can look at prospective colleges
+
+When I login as a user, I want to be able to create my own profile, so I can save information
+
+When I login as a user, I want to be able to edit my profile, so I can customize my portfolio
+
+When I login, I want to be able to save my searches, so that I can go back to them later 
+
+When I login, I want to be able to go through my saved list and edit them, so that I can narrow down my choices
+
+When I 
