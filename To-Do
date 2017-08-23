@@ -1,11 +1,23 @@
 To-Do
 
-1. Change column names in Data.csv to Program name
-1.5 . Make associations between college x programs
+WEDNESDAY
+1. Change column names in Data.csv to Program name - DONE
+1.5 . Make associations between college x programs - DONE
 2. Edit feature for User - DONE
-3. Dropdown menu of majors for user create/edit
+3. Dropdown menu of majors for user create/edit -DONE
 4. Search filter and check if logged in to continue
+	a. Home page search filter
+	 - gives results and related results - DONE 
+	b. User search filter page 
+	 - lets user search colleges if they're on their profile
+	c. College search filter
+	page 
+	 - lets user search colleges if they're on the college page 
 5. CSS (header/footer/login/search)
 
-
 100. Review feature???
+
+
+
+THURSDAY
+

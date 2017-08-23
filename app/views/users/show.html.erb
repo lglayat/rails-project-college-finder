@@ -4,7 +4,9 @@
 
 <ul>
   <li id="user[name]">Name: <%= @user.username %></li>
+  <li>State: <%= @user.state %></li>
   <li>Field of Study: <%= @user.program.name %></li>
+
 
   <% if @user.sat_score != nil %>
   	<li>SAT Score: <%= @user.sat_score %></li>

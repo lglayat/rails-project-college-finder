@@ -27,6 +27,7 @@
 
         <% if logged_in? %>
          <%= link_to 'Logout', '/sessions/destroy', class: 'item', method: 'delete' %>
+         <%= link_to "Your Profile", user_path(current_user) %>
         <% else %>
          <p><%= link_to "Sign In", '/signin' %></p>
       <% end %>
@@ -37,13 +38,11 @@
 <!-- Close Header -->
 
 <!-- Main Body Content  -->
-    <div class="ui middle grid ">
-      <div class="eight wide column">
+
 
         <%= yield %>
 
-      </div>
-    </div>
+
 <!-- Close Main Body Content -->
 
 <!-- Nav Links -->

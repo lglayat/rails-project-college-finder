@@ -1,14 +1,24 @@
 <h1>Edit Profile</h1>
 
 <%= form_for @user, {html: {class: 'ui form'}} do |f| %>
+
   	<ul><div class="field">
 <p><%= f.label :name %>
     <%= f.text_field :username, placeholder: 'Enter name' %>
 	</div></p></ul>
+
+	<ul><div class="field">
+<p><%= f.label :state %>
+<%= f.text_field :state, placeholder: 'State' %>
+  </div></p></ul>
+
+
 	<ul><div class="field">
 <p><%= f.label :password %>
 <%= f.text_field :password, placeholder: 'Password' %>
   </div></p></ul>
+
+  
 <ul><p>SAT Score <%= f.text_field :sat_score %><br></p></ul>
 <ul><p>ACT Score <%= f.text_field :act_avg %><br></p></ul>
 <!-- select menu for majors -->

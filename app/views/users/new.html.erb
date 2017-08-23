@@ -3,12 +3,24 @@
 <p><%= f.label :name %>
     <%= f.text_field :username, placeholder: 'Enter name' %>
 	</div></p></ul>
+
+	<ul><div class="field">
+<p><%= f.label :state %>
+<%= f.text_field :state, placeholder: 'State' %>
+  </div></p></ul>
+
 	<ul><div class="field">
 <p><%= f.label :password %>
 <%= f.text_field :password, placeholder: 'Password' %>
   </div></p></ul>
-<ul><p>SAT Score <%= f.text_field :sat_score %><br></p></ul>
-<ul><p>ACT Score <%= f.text_field :act_avg %><br></p></ul>
+
+  	<ul><div class="field">	
+<ul><p>SAT Score <%= f.text_field :sat_score %><br>
+	</div></p></ul>
+
+	<ul><div class="field">	
+<ul><p>ACT Score <%= f.text_field :act_avg %><br>
+	</div></p></ul>
 <!-- select menu for majors -->
 
 <ul><p>Field of Study <%= f.collection_select :program_id, Program.all, :id, :name %><br></p></ul>
