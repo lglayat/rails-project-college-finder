@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20170822140918) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
+    t.string "state"
     t.string "password_digest"
     t.integer "program_id"
     t.integer "sat_score"

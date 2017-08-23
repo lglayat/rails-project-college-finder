@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :reviews
   resources :users
   resources :colleges
+  # resources :sessions, only: [:delete]
 
 
   root to: 'home#index'
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
   post '/signin', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   get '/name_search', to: 'search#name_search'
+  get '/user_search', to: 'search#user_search'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

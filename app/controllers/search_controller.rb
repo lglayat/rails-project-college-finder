@@ -11,7 +11,21 @@ class SearchController < ApplicationController
 	end
 
 	def user_search
+		# binding.pry
 
+		@arr = []
+		College.all.each do |c|
+			if params[:in_state] == "1"
+				if c.state == current_user.state && c.programs.include?(current_user.program) 
+					@arr << c
+				end
+			else
+				if c.programs.include?(current_user.program)
+					@arr << c
+				end
+			end
+			@arr
+		end
 	end
 
 end
