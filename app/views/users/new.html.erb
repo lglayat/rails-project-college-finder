@@ -10,7 +10,8 @@
 <ul><p>SAT Score <%= f.text_field :sat_score %><br></p></ul>
 <ul><p>ACT Score <%= f.text_field :act_avg %><br></p></ul>
 <!-- select menu for majors -->
-<ul><p>Field of Study <%= f.text_field :major %><br></p></ul>
+
+<ul><p>Field of Study <%= f.collection_select :program_id, Program.all, :id, :name %><br></p></ul>
 <ul><%= f.submit class: 'large ui green basic button' %><br></ul>
 
 <% end %> 
