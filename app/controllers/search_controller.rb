@@ -17,7 +17,11 @@ class SearchController < ApplicationController
 		College.all.each do |c|
 			if params[:in_state] == "1"
 				if c.state == current_user.state && c.programs.include?(current_user.program) 
-					@arr << c
+					if current_user.sat_score != nil && c.sat_score <= current_user.sat_score
+						@arr << c
+					else current_user.act_avg != nil && c.act_avg <= current_user.act_avg
+						@arr << c
+					end
 				end
 			else
 				if c.programs.include?(current_user.program)
