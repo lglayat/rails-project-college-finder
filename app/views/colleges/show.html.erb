@@ -15,3 +15,10 @@
 <% end %>
 
 </ul>
+
+<% if logged_in? %>
+	<%= form_tag "/add_to_watchlist" do %>
+	<%= hidden_field_tag :college_id, @college.id %>
+	  <%= submit_tag "Add to Your List" %>
+	<% end %>
+<% end %>

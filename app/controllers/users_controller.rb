@@ -32,6 +32,24 @@ class UsersController < ApplicationController
 		redirect_to user_path(@user)
 	end
 
+	def add_to_watchlist
+		@college = College.find_by(id: params[:college_id]) 
+		
+		if current_user.colleges.include?(@college)
+			flash[:message] = "College already on your list!"
+		else
+			current_user.colleges << @college
+		end
+			
+		redirect_to user_path(current_user)
+
+	end
+
+	def delete_watchlist
+		binding.pry
+
+	end
+
 
 
 	private

@@ -26,3 +26,14 @@
   <%= submit_tag "View Recommended Colleges" %>
 <% end %>
 
+<h3>Colleges on Your List</h3>
+
+<ul>
+<% current_user.colleges.each do |c| %>
+
+<li> <%= link_to c.name, college_path(c) %> <%= button_to "Delete", '/delete_watchlist', method: "delete"%> </li>
+
+<% end %> 
+</ul>
+
+
