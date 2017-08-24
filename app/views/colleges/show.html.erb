@@ -4,3 +4,14 @@
 <p>Average ACT Score: <%= @college.act_avg %></p>
 <p>Tuition: <%= @college.cost %></p>
 
+
+<p> Programs Offered: </p>
+<ul>
+
+<% @college.programs.each do |p| %>
+
+<li> <%= p.name %> </li>
+
+<% end %>
+
+</ul>

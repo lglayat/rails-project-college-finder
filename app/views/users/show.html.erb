@@ -4,7 +4,10 @@
 
 <ul>
   <li id="user[name]">Name: <%= @user.username %></li>
-  <li>Field of Study: <%= @user.major %></li>
+  <li>State: <%= @user.state %></li>
+  <li>Field of Study: <%= @user.program.name %></li>
+
+
 
   <% if @user.sat_score != nil %>
   	<li>SAT Score: <%= @user.sat_score %></li>
@@ -14,5 +17,12 @@
   	<li>ACT Score: <%= @user.act_avg %></li>
   <% end %>
 
+  <%= link_to "Edit Profile", edit_user_path(@user) %>
 </ul>
+
+<%= form_tag("/user_search", method: "get") do %>
+  Are you studying In State Only? 
+  <%= check_box_tag :in_state %>
+  <%= submit_tag "View Recommended Colleges" %>
+<% end %>
 

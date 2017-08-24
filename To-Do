@@ -1,11 +1,31 @@
 To-Do
 
-1. Change column names in Data.csv to Program name
-1.5 . Make associations between college x programs
-2. Edit feature for User
-3. Dropdown menu of majors for user create/edit
+WEDNESDAY
+1. Change column names in Data.csv to Program name - DONE
+1.5 . Make associations between college x programs - DONE
+2. Edit feature for User - DONE
+3. Dropdown menu of majors for user create/edit -DONE
 4. Search filter and check if logged in to continue
-5. CSS (header/footer/login/search)
-
+	a. Home page search filter
+	 - gives results and related results - DONE 
+	b. User search filter page 
+	 - lets user search colleges if they're on their profile - DONE 
+	c. College search filter
+	page 
+	 - lets user search colleges if they're on the college page DONE 
+5. CSS (header/footer/login/search) - DONE
 
 100. Review feature???
+
+
+
+THURSDAY
+
+1. Advance Search Filter below "All Colleges and All Programs" (refer to layouts folder in views)
+	- will require search_controller, routes, and rendering to a new page result
+1.5 Finalize styling and all CSS CRAP
+2. Add extra feature if we have time... review?
+3. Add the link to the Admission page of each college for user to apply
+4. Add details to college (eg: Bio, etc)
+ 
+
