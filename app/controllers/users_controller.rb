@@ -46,10 +46,10 @@ class UsersController < ApplicationController
 	end
 
 	def delete_watchlist
-		binding.pry
-
+		@college = College.find_by(id: params[:college_id]) 
+		current_user.colleges.delete(@college)
+		redirect_to user_path(current_user)
 	end
-
 
 
 	private

@@ -48,14 +48,16 @@
       <a href="/"><h3>Home</h3></a>  
       <a href="/colleges"><h3>Colleges</h3></a>  
       <a href="/programs"><h3>Programs</h3></a> 
+      <a href="/advanced_search"><h3>Advanced Search</h3></a> 
+
     </div>
      
     <div class="ui container">
       <div class="right menu">
         <div class="ui search">
-          <%= form_tag("/name_search", method: "get", placeholder: "Search...") do %>
+          <%= form_tag("/name_search", method: "get") do %>
             <div class="ui icon input">
-            <%= text_field_tag(:name) %>
+            <%= text_field_tag :name, 'Enter College here...' %>
             <i class="search link icon" type="submit"></i>
             </div>
           <% end %> 

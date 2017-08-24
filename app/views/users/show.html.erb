@@ -31,7 +31,12 @@
 <ul>
 <% current_user.colleges.each do |c| %>
 
-<li> <%= link_to c.name, college_path(c) %> <%= button_to "Delete", '/delete_watchlist', method: "delete"%> </li>
+<li> <%= link_to c.name, college_path(c) %> 
+<%= form_tag "/delete_watchlist" do %>
+  <%= hidden_field_tag :college_id, c.id %>
+    <%= submit_tag "Delete From Your List" %>
+  <% end %> </li>
+
 
 <% end %> 
 </ul>
