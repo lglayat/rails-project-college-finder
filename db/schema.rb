@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20170822140918) do
     t.integer "sat_score"
     t.integer "act_avg"
     t.integer "cost"
+    t.string "homepage"
+    t.float "acceptance_rate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
