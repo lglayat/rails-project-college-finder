@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+<!-- Open Head -->
   <head>
     <meta charset="utf-8">
     <title>College Finder</title>
@@ -9,68 +10,86 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
   </head>
+  <!-- Close Head -->
 
-  <!-- Open Header -->
-  <div class="ui header">
-
-    <div class="ui blue menu">
-      
-      <div class="item">
-        <a href="/"><h1>College Finder</h1></a>
-      </div>
-
-      <div class="right item">
-
-        <div class= "four wide item">
-          <a href="/users/new"><h4>Sign Up!</h4></a>
+  <!--Open Body  -->
+  <body style="display:flex;min-height:100vh;flex-direction: column;'">
+    <!-- Open Header -->
+    <div style="flex:1;">
+      <div class="ui header">
+        <div class="ui blue menu">        
+          <div class="item">
+            <a href="/"><h1>College Finder</h1></a>
+          </div>
+          <div class="right item">
+            <div class= "four wide item">
+              <a href="/users/new"><h4>Sign Up!</h4></a>
+            </div>
+            <% if logged_in? %>
+              <div class="right item">
+                <a href="<%=user_path(current_user)%>"><h4>Your Profile</h4></a>
+               </div>
+              <div class="right item">
+                <h4><%= link_to 'Logout', logout_path, method: 'delete' %></h4>
+              </div>
+            <% else %> 
+              <div class="right item">
+                <a href="/signin"><h4>Sign In</h4></a>
+              </div>
+            <% end %>
+          </div>
         </div>
-          
-        <% if logged_in? %>
-          <div class="right item">
-            <a href="<%=user_path(current_user)%>"><h4>Your Profile</h4></a>
-           </div>
-          <div class="right item">
-            <h4><%= link_to 'Logout', logout_path, method: 'delete' %></h4>
-          </div>
-        <% else %> 
-          <div class="right item">
-            <a href="/signin"><h4>Sign In</h4></a>
-          </div>
-        <% end %>
+    <!-- Close Header -->
+
+    <!-- Open secondary menu -->
+    <div class="ui secondary menu">
+      <div class="container" style="margin-left: auto; margin-right: auto;">
+      <div class="item">
+        <a href="/"><h3>Home</h3></a>
+      </div>  
+      <div class="item">
+        <a href="/colleges"><h3>Colleges</h3></a>
+        </div>
+      <div class="item"> 
+        <a href="/programs"><h3>Programs</h3></a>
       </div>
-
-  </div>
-  <!-- Close Header -->
-
-  <!-- Open secondary menu -->
-  <div class="ui secondary menu">
-    <div class="item">
-      <a href="/"><h3>Home</h3></a>  
-      <a href="/colleges"><h3>Colleges</h3></a>  
-      <a href="/programs"><h3>Programs</h3></a> 
-      <a href="/advanced_search"><h3>Advanced Search</h3></a> 
-
-    </div>
+      <div class="item"> 
+        <a href="/advanced_search"><h3>Advanced Search</h3></a>
+        </div>
      
-    <div class="ui container">
-      <div class="right menu">
-        <div class="ui search">
+       
+
+      <div class="ui search">
           <%= form_tag("/name_search", method: "get") do %>
             <div class="ui icon input">
-            <%= text_field_tag :name, 'Enter College here...' %>
-            <i class="search link icon" type="submit"></i>
+              <%= text_field_tag :name, 'Enter College here...' %>
+              <i class="search link icon" type="submit"></i>
             </div>
           <% end %> 
-
-        </div>
       </div>
+
+       </div>
     </div>
 
-  </div>
-  <!-- Close Secondary menu -->
+    
+
+    </div>
+    <!-- Close Secondary menu -->
     
  <%= yield %>
-    <body>
-    <!-- Put Advance Search Filter -->
+   
+   </div>
+
+
+   <!-- Open Footer -->
+    <div class="ui vertical footer segment form-page", style="background-color: grey;bottom: 0; min-height: 15%;text-align: center">
+      <div class="ui container">
+        <p>College Finder Inc.</p>
+        <p>By Stacey Astoveza and Luke Glayat</p>
+        <p>Flatiron School 2017</p>
+      </div>
+    </div>
+    <!-- Close Footer -->
+    
   </body>
 </html>

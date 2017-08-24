@@ -37,7 +37,7 @@ end
 csv_text = File.read('db/data.csv')
 csv = CSV.parse(csv_text, :headers => true)
 csv.each do |row|
-	college = College.create(name: row[0], state: row[2], homepage: row[3], acceptance_rate: row[4], sat_score: row[6], act_avg: row[7], cost: row[46] )
+	college = College.create(name: row[0], state: row[2], sat_score: row[6], act_avg: row[7], cost: row[46], homepage: row[3], acceptance_rate: row[4] )
 end
 
 

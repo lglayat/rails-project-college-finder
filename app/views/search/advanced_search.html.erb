@@ -1,3 +1,7 @@
+<% if flash[:message] != nil%>
+ 	<%= flash[:message] %>
+ <% end %>
+
 <%= form_tag "/advanced_search_results", {html: {class: 'ui form'}} do %>
 <div class="ui form">
 
@@ -18,7 +22,7 @@
 <!-- select menu for majors -->
 	<ul><div class="field">
 	<p>Field of Study <%= collection_select :program, :program_id, Program.all, :id, :name %><br></p></ul>
-	<ul><%= submit_tag "Submit Search" %><br></ul>
+	<ul><%= submit_tag "Submit Search", class: 'large ui blue basic button' %><br></ul>
 
 </div>
 <% end %> 

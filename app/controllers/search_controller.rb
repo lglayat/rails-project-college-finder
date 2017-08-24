@@ -43,14 +43,20 @@ class SearchController < ApplicationController
 			if params[:state] == c.state 
 				@program = Program.find(params[:program][:program_id])
 				if c.programs.include?(@program)
-					if params[:sat_score] && c.sat_score <= params[:sat_score].to_i
+					if params[:sat_score] != "" && c.sat_score <= params[:sat_score].to_i
+						# binding.pry
 						@arr << c
-					elsif params[:act_avg] && c.act_avg <= params[:act_avg].to_i
+					elsif params[:act_avg] != "" && c.act_avg <= params[:act_avg].to_i
 						@arr << c
 					end
 				end
 			end
 		end
+
+			if @arr.length == 0
+				flash[:message]= "No College with those criteria. Please refine search."
+			redirect_to "/advanced_search"
+			end
 		@arr
 	end
 end
