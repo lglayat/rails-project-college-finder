@@ -2,43 +2,51 @@
  	<%= flash[:message] %>
  <% end %>
 
+
+<div style="text-align: left;color:grey;">
 <ul>
-  <li id="user[name]">Name: <%= @user.username %></li>
-  <li>State: <%= @user.state %></li>
-  <li>Field of Study: <%= @user.program.name %></li>
+  <p id="user[name]">Name: <%= @user.username %></p>
+  <p>State: <%= @user.state %></p>
+  <p>Field of Study: <%= @user.program.name %></p>
 
 
 
   <% if @user.sat_score != nil %>
-  	<li>SAT Score: <%= @user.sat_score %></li>
+  	<p>SAT Score: <%= @user.sat_score %></p>
   <% end %>
 
   <% if @user.act_avg != nil %>
-  	<li>ACT Score: <%= @user.act_avg %></li>
+  	<p>ACT Score: <%= @user.act_avg %></p>
   <% end %>
 
   <%= link_to "Edit Profile", edit_user_path(@user) %>
 </ul>
 
+<div style="text-align: center;color:grey;">
 <%= form_tag("/user_search", method: "get") do %>
   Are you studying In State Only? 
   <%= check_box_tag :in_state %>
-  <%= submit_tag "View Recommended Colleges" %>
+  <%= submit_tag "View Recommended Colleges", class: 'small ui blue basic button'  %>
 <% end %>
+
 
 <h3>Colleges on Your List</h3>
 
 <ul>
 <% current_user.colleges.each do |c| %>
 
-<li> <%= link_to c.name, college_path(c) %> 
+<p> <%= link_to c.name, college_path(c) %> 
 <%= form_tag "/delete_watchlist" do %>
   <%= hidden_field_tag :college_id, c.id %>
-    <%= submit_tag "Delete From Your List" %>
-  <% end %> </li>
+    <%= submit_tag "Delete From Your List", class: 'small ui red basic button'  %>
+  <% end %> </p>
+
 
 
 <% end %> 
-</ul>
+    </ul>
+  </div>
+</div>
+
 
 
