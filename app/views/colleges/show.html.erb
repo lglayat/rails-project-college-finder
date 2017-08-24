@@ -1,3 +1,4 @@
+
 <p>Name: <%= @college.name %> </p>
 <p>State: <%= @college.state %></p>
 <p>Average SAT Score: <%= @college.sat_score %></p>
@@ -22,6 +23,6 @@
 <% if logged_in? %>
 	<%= form_tag "/add_to_watchlist" do %>
 	<%= hidden_field_tag :college_id, @college.id %>
-	  <%= submit_tag "Add to Your List" %>
+	  <%= submit_tag "Add to Your List", class: 'small ui blue basic button' %>
 	<% end %>
 <% end %>

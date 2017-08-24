@@ -62,7 +62,7 @@
       <div class="ui search">
           <%= form_tag("/name_search", method: "get") do %>
             <div class="ui icon input">
-              <%= text_field_tag :name, 'Enter College here...' %>
+              <%= text_field_tag :name, nil, placeholder:'Enter College here...' %>
               <i class="search link icon" type="submit"></i>
             </div>
           <% end %> 
