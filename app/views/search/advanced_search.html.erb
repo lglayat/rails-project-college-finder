@@ -1,0 +1,29 @@
+<% if flash[:message] != nil%>
+ 	<%= flash[:message] %>
+ <% end %>
+
+<%= form_tag "/advanced_search_results", {html: {class: 'ui form'}} do %>
+<div class="ui form">
+
+<div class="six wide field">
+
+  	<ul><div class="field">
+	<p><%= label_tag :state %>
+	<%= text_field_tag :state %>
+  	</div></p></ul>
+
+  <ul><div class="field">
+	<p>SAT Score <%= text_field_tag :sat_score %><br>
+	</p></ul>
+
+	<ul><div class="field">
+	<p>ACT Score <%= text_field_tag :act_avg %><br>
+	</p></ul>
+<!-- select menu for majors -->
+	<ul><div class="field">
+	<p>Field of Study <%= collection_select :program, :program_id, Program.all, :id, :name %><br></p></ul>
+	<ul><%= submit_tag "Submit Search", class: 'large ui blue basic button' %><br></ul>
+
+</div>
+<% end %> 
+

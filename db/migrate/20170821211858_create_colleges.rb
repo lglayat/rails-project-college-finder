@@ -6,6 +6,8 @@ class CreateColleges < ActiveRecord::Migration[5.1]
     	t.integer :sat_score
     	t.integer :act_avg
     	t.integer :cost
+      t.string :homepage
+      t.float :acceptance_rate
       t.timestamps
     end
   end

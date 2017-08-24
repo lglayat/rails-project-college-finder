@@ -26,3 +26,19 @@
   <%= submit_tag "View Recommended Colleges" %>
 <% end %>
 
+<h3>Colleges on Your List</h3>
+
+<ul>
+<% current_user.colleges.each do |c| %>
+
+<li> <%= link_to c.name, college_path(c) %> 
+<%= form_tag "/delete_watchlist" do %>
+  <%= hidden_field_tag :college_id, c.id %>
+    <%= submit_tag "Delete From Your List" %>
+  <% end %> </li>
+
+
+<% end %> 
+</ul>
+
+
