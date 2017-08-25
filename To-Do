@@ -23,10 +23,10 @@ THURSDAY
 
 1. Advance Search Filter below "All Colleges and All Programs" (refer to layouts folder in views)
 	- will require search_controller, routes, and rendering to a new page result - DONE
-1.5 Finalize styling and all CSS CRAP
-2. Add extra feature if we have time... review?
+1.5 Finalize styling and all CSS - DONE
+2. Add extra feature if we have time... review? - not going to do
 3. Add the link to the Admission page of each college for user to apply - DONE
-4. Add details to college (eg: Bio, etc)
+4. Add details to college (eg: Bio, etc) - Not going to do
 5. Save feature for user to be able to save colleges search - DONE
 6. Delete button on Watchlist - DONE
  

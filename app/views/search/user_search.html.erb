@@ -1,7 +1,5 @@
 <ul>
-<% @arr.each do |college| %>
-
-<li> <%= link_to college.name, college_path(college)%></li>
-
-<% end %> 
+	<% @arr.each do |college| %>
+		<li> <%= link_to college.name, college_path(college)%></li>
+	<% end %> 
 </ul>

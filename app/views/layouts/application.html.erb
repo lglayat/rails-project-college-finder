@@ -69,14 +69,13 @@
           color:white;
       }
 
-      
-
     </style>
   </head>
-  <!-- Close Head -->
+<!-- Close Head -->
 
   <!--Open Body  -->
-  <body style="display:flex;min-height:100vh;flex-direction: column;'">
+  <body style="display:flex;min-height:100vh;flex-direction: column;" data-no-turbolink="true">
+
     <!-- Open Header -->
     <div style="flex:1;">
       <div class="ui header">
@@ -104,55 +103,45 @@
         </div>
     <!-- Close Header -->
 
-    <!-- Open secondary menu -->
+    <!-- Open Nav Bar -->
     <div class="ui secondary menu">
       <div class="container" style="margin-left: auto; margin-right: auto;">
-      <div class="item">
-        <a href="/"><h3>Home</h3></a>
-      </div>  
-      <div class="item">
-        <a href="/colleges"><h3>Colleges</h3></a>
+        <div class="item">
+          <a href="/"><h3>Home</h3></a>
+        </div>  
+        <div class="item">
+          <a href="/colleges"><h3>Colleges</h3></a>
         </div>
-      <div class="item"> 
-        <a href="/programs"><h3>Programs</h3></a>
-      </div>
-      <div class="item"> 
-        <a href="/advanced_search"><h3>Advanced Search</h3></a>
+        <div class="item"> 
+         <a href="/programs"><h3>Programs</h3></a>
+        </div>
+        <div class="item"> 
+         <a href="/advanced_search"><h3>Advanced Search</h3></a>
         </div>
      
-       
-
-      <div class="ui search">
-      <div class="right item"
-          <%= form_tag("/name_search", method: "get") do %>
-            <div class="ui icon input">
-              <%= text_field_tag :name, nil, placeholder:'Enter College here...' %>
-              <i class="search link icon" type="submit"></i>
-            </div>
-          <% end %> 
+        <%= form_tag("/name_search", method: "get") do %>
+          <div class="ui icon input">
+            <%= text_field_tag :name, nil, placeholder:'Enter College here...' %>
+            <i class="search link icon" type="submit"></i>
           </div>
+        <% end %> 
       </div>
-
-       </div>
     </div>
-
-    
-
-    </div>
-    <!-- Close Secondary menu -->
-    
- <%= yield %>
+  </div>
+  <!-- Close Nav Bar-->
+  
+  <%= yield %>
    
    </div>
- </body>
 
    <!-- Open Footer -->
-    <div class="ui vertical footer segment form-page", style="background-color: #B0B5AA;bottom: 0; min-height: 10%;text-align: center">
+   <div class="ui vertical footer segment form-page", style="background-color: #B0B5AA;bottom: 0; min-height: 10%;text-align: center">
       <div class="ui container" style="font-size:1em; color:#545752;">
         <p>College Finder Inc. | By Stacey Astoveza and Luke Glayat | Flatiron School 2017</p>
       </div>
     </div>
-    <!-- Close Footer -->
-    
+  <!-- Close Footer -->
+
+ </body>
   
 </html>
