@@ -1,16 +1,23 @@
  <%= flash[:message] %>
 <div class="ui form">
-	<div class="six wide field">
+ <div class="six wide field">
 
+  <ul>
 	<div class="field">
-<%= form_tag signin_path do %>
-<h3>Username:</h3>
-<%= text_field_tag :username %>
+		<%= form_tag signin_path do %>
+		  <h3>Username:</h3>
+		    <%= text_field_tag :username %>
+    </div>
+  </ul>
 
+  <ul>
 	<div class="field">
-<h3>Password:</h3>
-<%= text_field_tag :password %>
-<%= submit_tag "Submit", class: 'large ui blue basic button' %>
+		<h3>Password:</h3>
+		 <p><%= text_field_tag :password %></p>
+			<%= submit_tag "Submit", class: 'large ui blue basic button' %>
+	</div>
+  </ul>
+
 <% end %>
 
 	</div>
