@@ -1,8 +1,6 @@
 <ul>
-<% @college_results.each do |college| %>
-
-<li> <%= link_to college.name, college_path(college) %> </li>
-
-<% end %> 
+	<% @college_results.each do |college| %>
+		<li style="list-style: none;"> <%= link_to college.name, college_path(college) %> </li>
+	<% end %> 
 </ul>
 

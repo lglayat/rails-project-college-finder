@@ -5,11 +5,9 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 
-
 	def show
 		@user = User.find(params[:id])
 	end
-
 
 	def create
 		@user = User.new(user_params)
@@ -42,7 +40,6 @@ class UsersController < ApplicationController
 		end
 			
 		redirect_to user_path(current_user)
-
 	end
 
 	def delete_watchlist
@@ -54,8 +51,8 @@ class UsersController < ApplicationController
 
 	private
 
-	def user_params
-		params.require(:user).permit(:username, :password, :program_id, :sat_score, :act_avg, :state)
-	end
+		def user_params
+			params.require(:user).permit(:username, :password, :program_id, :sat_score, :act_avg, :state)
+		end
 
 end

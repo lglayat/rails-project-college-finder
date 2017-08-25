@@ -1,28 +1,26 @@
 
-<p>Name: <%= @college.name %> </p>
-<p>State: <%= @college.state %></p>
-<p>Average SAT Score: <%= @college.sat_score %></p>
-<p>Average ACT Score: <%= @college.act_avg %></p>
-<p>Acceptance Rate: <%= "#{number_to_percentage(@college.acceptance_rate).to_f * 100}" %>%</p>
-<p>Tuition: <%= @college.cost %></p>
-<p>Website: <%= link_to "#{@college.homepage}", "https://" + @college.homepage %></p>
-
-
-
-<p> Programs Offered: </p>
 <ul>
-
-<% @college.programs.each do |p| %>
-
-<li> <%= p.name %> </li>
-
-<% end %>
-
+	<p>Name: <%= @college.name %> </p>
+	<p>State: <%= @college.state %></p>
+	<p>Average SAT Score: <%= @college.sat_score %></p>
+	<p>Average ACT Score: <%= @college.act_avg %></p>
+	<p>Acceptance Rate: <%= "#{number_to_percentage(@college.acceptance_rate).to_f * 100}" %>%</p>
+	<p>Tuition: <%= @college.cost %></p>
+	<p>Website: <%= link_to "#{@college.homepage}", "https://" + @college.homepage %></p>
+	<p> Programs Offered: </p>
 </ul>
 
-<% if logged_in? %>
-	<%= form_tag "/add_to_watchlist" do %>
-	<%= hidden_field_tag :college_id, @college.id %>
-	  <%= submit_tag "Add to Your List", class: 'small ui blue basic button' %>
+<ul>
+	<% @college.programs.each do |p| %>
+		<li style="list-style: none;"=> <%= p.name %> </li>
 	<% end %>
-<% end %>
+</ul>
+
+<ul>
+	<% if logged_in? %>
+		<%= form_tag "/add_to_watchlist" do %>
+			<%= hidden_field_tag :college_id, @college.id %>
+			<%= submit_tag "Add to Your List", class: 'small ui blue basic button' %>
+			<% end %>
+	<% end %>
+</ul>

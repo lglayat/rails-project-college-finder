@@ -1,59 +1,62 @@
 <%= form_for @user, {html: {class: 'ui form'}} do |f| %>
-<div class="ui form">
-<div class="six wide field">
 
-  <ul>
-	<div class="field">
-   	  <p><%= f.label :name %>
-	   <%= f.text_field :username, placeholder: 'Enter full name' %>
+  <div class="ui form">
+    <div class="six wide field">
+
+      <ul>
+        <div class="field">
+       	  <p><%= f.label :name %>
+          <%= f.text_field :username, placeholder: 'Enter full name' %>
+          </p>
+        </div>
+      </ul>
+
+      <ul>
+      	<div class="field">
+      	  <p><%= f.label :password %>
+      	    <%= f.text_field :password, placeholder: 'Password' %>
+          </p>
+        </div>
+      </ul>
+
+      <ul>
+        <div class="field">
+      	  <p><%= f.label :state %>
+           <%= f.text_field :state, placeholder: 'Eg: NY, NJ, CA' %>
+          </p>
+        </div>
+      </ul>
+
+      <ul>
+        <div class="field">
+     	    <p>SAT Score <%= f.text_field :sat_score %><br>
+          </p>
+        </div>
+      </ul>
+
+      <ul>
+        <div class="field">
+          <p>ACT Score <%= f.text_field :act_avg %><br>
+          </p>
+        </div>
+      </ul>
+
+      <ul>
+        <div class="field">
+          <p>Field of Study <%= f.collection_select :program_id, Program.all, :id, :name %>
+          </p>
+        </div>
+      </ul>
+
+      <ul>
+        <%= f.submit class: 'large ui blue basic button' %><br>
+      </ul>
+
     </div>
-   </p>
-</ul>
-
-  <ul>
-	<div class="field">
-	  <p><%= f.label :password %>
-	    <%= f.text_field :password, placeholder: 'Password' %>
-    </div>
-   </p>
-</ul>
-
-  <ul>
-	<div class="field">
-  	  <p><%= f.label :state %>
-       <%= f.text_field :state, placeholder: 'Eg: NY, NJ, CA' %>
-    </div>
-   </p>
-</ul>
-
-  <ul>
-    <div class="field">
- 	 <p>SAT Score <%= f.text_field :sat_score %><br>
-    </div>
-   </p>
-</ul>
-
-  <ul>
-   <div class="field">
-	 <p>ACT Score <%= f.text_field :act_avg %><br>
-   </div>
-  </p>
-</ul>
-<!-- select menu for majors -->
-  <ul>
-   <div class="field">
-	 <p>Field of Study <%= f.collection_select :program_id, Program.all, :id, :name %>
-	   </p>
-   </div>
-</ul>
-
-   <ul>
-	<%= f.submit class: 'large ui blue basic button' %><br>
-</ul>
+  </div>
 
 <% end %> 
 
-  	</div>
-</div>
+
 
 

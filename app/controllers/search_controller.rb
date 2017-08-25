@@ -54,7 +54,7 @@ class SearchController < ApplicationController
 		end
 
 			if @arr.length == 0
-				flash[:message]= "No College with those criteria. Please refine search."
+				flash[:message]= "No Colleges that match criteria. Please refine search."
 			redirect_to "/advanced_search"
 			end
 		@arr

@@ -1,8 +1,5 @@
-
 <ul>
-<% @colleges.each do |c| %>
-
-<li style="list-style: none;"> <%= link_to c.name, college_path(c) %> </li>
-
-<% end %> 
+	<% @colleges.each do |c| %>
+		<li style="list-style: none;"> <%= link_to c.name, college_path(c) %> </li>
+	<% end %> 
 </ul>
