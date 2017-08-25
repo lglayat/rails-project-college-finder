@@ -3,6 +3,7 @@
 COLLEGE FINDER
 
 Introduction
+  
   A tool to help you look for the colleege of your dreams! 
   
   - Browse through colleges through the 'Advance Search' filter to see which colleges that suites your criteria. 
